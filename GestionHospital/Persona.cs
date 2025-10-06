@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace GestionHospital
 {
-    public class Persona
+    public abstract class Persona
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+
+        public override string ToString()
+        {
+            return $"Id={Id}, Nombre={Nombre}";
+        }
     }
 }

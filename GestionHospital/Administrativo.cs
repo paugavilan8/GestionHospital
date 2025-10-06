@@ -9,5 +9,10 @@ namespace GestionHospital
     public class Administrativo : Persona
     {
         public string Departamento { get; set; }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}, Departamento={Departamento}";
+        }
     }
 }

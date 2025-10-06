@@ -12,8 +12,6 @@ namespace GestionHospital
         private List<Paciente> pacientes = new List<Paciente>();
         private List<Administrativo> administrativos = new List<Administrativo>();
         private int siguienteId = 1;
-
-        // Alta Médico
         public void AgregarMedico()
         {
             var medico = new Medico();
@@ -25,8 +23,6 @@ namespace GestionHospital
             medicos.Add(medico);
             Console.WriteLine("Médico agregado con éxito.");
         }
-
-        // Alta Paciente
         public void AgregarPaciente()
         {
             var paciente = new Paciente();
@@ -38,8 +34,6 @@ namespace GestionHospital
             pacientes.Add(paciente);
             Console.WriteLine("Paciente agregado con éxito.");
         }
-
-        // Alta Administrativo
         public void AgregarAdministrativo()
         {
             var administrativo = new Administrativo();
@@ -51,8 +45,6 @@ namespace GestionHospital
             administrativos.Add(administrativo);
             Console.WriteLine("Administrativo agregado con éxito.");
         }
-
-        // Asignar Paciente a Medico
         public void AsignarPacienteAMedico()
         {
             ListarPacientes();
@@ -77,18 +69,12 @@ namespace GestionHospital
                 Console.WriteLine("Paciente o médico no encontrado.");
             }
         }
-
-        // Listar médicos
         public void ListarMedicos()
         {
             Console.WriteLine("Lista de médicos:");
             foreach (var med in medicos)
-            {
-                Console.WriteLine($"{med.Id}: {med.Nombre} - {med.Especialidad}");
-            }
+                Console.WriteLine(med);
         }
-
-        // Listar pacientes de un médico
         public void ListarPacientesDeMedico()
         {
             ListarMedicos();
@@ -109,8 +95,6 @@ namespace GestionHospital
                 Console.WriteLine("Médico no encontrado.");
             }
         }
-
-        // Eliminar paciente
         public void EliminarPaciente()
         {
             ListarPacientes();
@@ -130,8 +114,6 @@ namespace GestionHospital
                 Console.WriteLine("Paciente no encontrado.");
             }
         }
-
-        // Eliminar médico
         public void EliminarMedico()
         {
             ListarMedicos();
@@ -151,8 +133,6 @@ namespace GestionHospital
                 Console.WriteLine("Médico no encontrado.");
             }
         }
-
-        // Eliminar administrativo
         public void EliminarAdministrativo()
         {
             ListarAdministrativos();
@@ -170,28 +150,18 @@ namespace GestionHospital
                 Console.WriteLine("Administrativo no encontrado.");
             }
         }
-
-        // Listar todos los pacientes
         public void ListarPacientes()
         {
             Console.WriteLine("Lista de pacientes:");
             foreach (var pac in pacientes)
-            {
-                Console.WriteLine($"{pac.Id}: {pac.Nombre} - {pac.Enfermedad}");
-            }
+                Console.WriteLine(pac);
         }
-
-        // Listar administrativos
         public void ListarAdministrativos()
         {
             Console.WriteLine("Lista de administrativos:");
             foreach (var admin in administrativos)
-            {
-                Console.WriteLine($"{admin.Id}: {admin.Nombre} - {admin.Departamento}");
-            }
+                Console.WriteLine(admin);
         }
-
-        // Ver lista de personas del hospital
         public void VerPersonasHospital()
         {
             ListarMedicos();

@@ -10,5 +10,10 @@ namespace GestionHospital
     {
         public string Especialidad { get; set; }
         public List<Paciente> Pacientes { get; set; } = new List<Paciente>();
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}, Especialidad={Especialidad}, Pacientes={Pacientes.Count}";
+        }
     }
 }
